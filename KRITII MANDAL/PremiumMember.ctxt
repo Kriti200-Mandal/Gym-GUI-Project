@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=PremiumMember
+comment1.params=id\ name\ location\ phone\ email\ gender\ DOB\ membershipStartDate\ personalTrainer
+comment1.target=PremiumMember(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment10.params=
+comment10.target=void\ display()
+comment2.params=
+comment2.target=java.lang.String\ getPersonalTrainer()
+comment3.params=
+comment3.target=boolean\ getIsFullyPayment()
+comment4.params=
+comment4.target=double\ getPaidAmount()
+comment5.params=
+comment5.target=double\ getDiscountAmount()
+comment6.params=
+comment6.target=void\ markAttendance()
+comment7.params=paidAmount
+comment7.target=java.lang.String\ payDueAmount(double)
+comment7.text=public\ String\ payDueAmount(double\ paidAmount)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ if(this.isFullyPayment\ \=\=true)\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ //System.out.println("Payment\ is\ fully\ done");\r\n\ \ \ \ \ \ \ \ \ \ \ \ return\ "payment\ completed";\r\n\ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ if\ (this.paidAmount>\ premiumCharge)\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ return\ "payment\ exceed";\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ if(\ this.paidAmount\=\=this.premiumCharge)\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ return\ "payment\ completed";\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ else\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ this.isFullyPayment\ \=\ false;\r\n\ \ \ \ \ \ \ \ \ \ \ \ System.out.println("please\ pay\ the\ full\ amount\ "\ );\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ this.paidAmount\ +\=paidAmount;\r\n\ \ \ \ \ \ \ \ return\ "payment\ completed";\r\n\ \ \ \ }\r\n\ \ \ \ public\ double\ calculateDiscount()\ {\r\n\ \ \ \ if\ (isFullyPayment)\ {\r\n\ \ \ \ \ \ \ \ discountAmount\ \=\ 0.10\ *\ premiumCharge;\r\n\ \ \ \ \ \ \ \ return\ discountAmount;\r\n\ \ \ \ }\ else\ {\r\n\ \ \ \ \ \ \ \ return\ 0;\r\n\ \ \ \ }\r\n\ \ \ \ \r\n}
+comment8.params=
+comment8.target=double\ calculateDiscount()
+comment8.text=public\ void\ calculateDiscount()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ if(\ isFullyPayment\ \=\=\ true)\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ this.discountAmount\ \=\ 0.1*\ premiumCharge;\r\n\ \ \ \ \ \ \ \ \ \ \ \ System.out.println("Your\ Amount\ to\ be\ paid\ after\ dicount\ is\ "\ +\ discountAmount);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ else\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ double\ remainingAmount\ \=\ premiumCharge-this.paidAmount;\r\n\ \ \ \ \ \ \ \ \ \ \ \ System.out.println("Your\ amount\ to\ be\ paid\ "\ +remainingAmount);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \r\n}
+comment9.params=
+comment9.target=void\ revertPremiumMember()
+numComments=11
